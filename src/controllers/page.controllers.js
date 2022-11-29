@@ -60,23 +60,11 @@ const Dashboard = async(req,res)=>{
     })
 }
 
-const authenticateLogin = async(req,res) =>{
-    const { user, password } = req.body
-    
-    if(user == process.env.ADMIN_NAME && password == process.env.ADMIN_PASSWORD){
-        return res.cookie("session", {user, password}, {expire : new Date() + 1000 * 60 * 60 }).json({ message: "Se inicio sesion correctamente" })
-    }
-
-    res.json({ message:"El usuario o la contraseña es incorrecto/a" })
-}
-
-
 module.exports = { 
     Home,
     Article,
     Contact,
     AboutMe,
     Login,
-    Dashboard,
-    authenticateLogin
+    Dashboard
 }

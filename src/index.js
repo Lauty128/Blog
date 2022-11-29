@@ -20,9 +20,9 @@ app.use(express.urlencoded({ extended: false }))
 
 //------ Routes
 app.use("/api" , require('./routes/api.routes'));
-app.use("/" , require('./routes/index.routes'));
+app.use("/", require('./routes/index.routes'));
 
 //------ Listen
-app.listen(PORT,()=>{
+app.listen(PORT,()=>
     console.log("Servidor abierto en el puerto " + PORT) 
-})
+)
