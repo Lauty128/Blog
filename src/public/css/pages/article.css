@@ -1,0 +1,118 @@
+.Main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--principal-color);
+  margin-top: 12em;
+  padding-bottom: 7em;
+  position: relative;
+}
+.Main__backTo {
+  position: absolute;
+  left: 1em;
+  top: -2em;
+}
+.Main__backTo i {
+  font-size: 1.5em;
+}
+.Main__headerImage {
+  width: 40em;
+  height: 22em;
+  margin-top: -7em;
+}
+.Main__infoContainer {
+  width: 30em;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0.4em;
+}
+.Main__infoContainer span {
+  color: rgb(146, 146, 146);
+  font-weight: 300;
+}
+.Main__infoContainer .category:hover {
+  color: rgb(49, 49, 49);
+}
+.Main__h2 {
+  font-size: 2.7em;
+  margin: 0.4em 0 0em 0;
+  text-align: center;
+}
+.Main__createdBy {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  color: rgb(128, 126, 126);
+}
+.Main__content {
+  width: 60%;
+}
+.Main__content h4 {
+  font-size: 1.1em;
+}
+.Main__content p {
+  width: 100%;
+  text-align: justify;
+  font-size: 1.1em;
+  margin: 10px 0;
+  color: rgb(54, 54, 54);
+}
+.Main__content ul {
+  margin-left: 40px;
+}
+.Main__content li {
+  list-style: disc;
+  color: rgb(54, 54, 54);
+  font-size: 1.1em;
+  font-family: var(--secundary-font);
+}
+.Main__content blockquote {
+  width: fit-content;
+  background-color: rgba(218, 218, 218, 0.644);
+  align-self: baseline;
+  margin: 0.2em 0;
+  padding: 0.25em 0.4em;
+}
+
+.imagesContainer {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.5em 0;
+}
+.imagesContainer__img1, .imagesContainer__img2 {
+  width: 15em;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  transition: transform 0.1s linear;
+}
+.imagesContainer__img2 {
+  margin-top: 4em;
+}
+.imagesContainer__img1:hover, .imagesContainer__img2:hover {
+  transform: translateY(0.2em);
+}
+
+@media screen and (max-width: 750px) {
+  .Main {
+    margin-top: 5em;
+  }
+  .Main__headerImage {
+    width: 100%;
+    margin-top: 0;
+  }
+  .Main__content {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .imagesContainer__img1, .imagesContainer__img2 {
+    width: 10em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .Main__content {
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=article.css.map */

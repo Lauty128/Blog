@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/pages/login.css">
+    <script src="https://kit.fontawesome.com/934826e832.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+</head>
+<body>
+
+    
+    <form action="/login" method="post" class="Form">
+
+        <a href="/" class="backTo">
+            <i class="fa-solid fa-reply"></i>
+        </a>
+
+        <h2 class="Form__h2">LOGIN</h2>
+
+        <div class="Form__inputContainer">
+            <label for="userInput" class="Form__label">Usuario</label>
+            <input type="text" name="user" id="userInput" class="Form__input">
+        </div>
+        <div class="Form__inputContainer">
+            <label for="passwordInput" class="Form__label">Contraseña</label>
+            <input type="password" name="password" id="passwordInput" class="Form__input">
+        </div>
+        <input type="submit" value="INGRESAR" class="Form__submit">
+    </form>
+
+</body>
+</html>

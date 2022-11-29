@@ -1,0 +1,71 @@
+
+<h2 class="Main__h2">LO MAS VISTO</h2>
+        
+<section  class="MainArticles" id="ArticlesSection">
+    <div class="MainArticle">
+        <div class="MainArticle__imageContainer">
+            <a title="<%= data[0].title %>" href="/articles/<%= data[0]._id %>">
+                <img src="<%= data[0].image %>" class="MainArticles__image" alt="<%= data[0].alt %>"/>
+            </a>
+        </div>
+
+        <div class="MainArticle__text">
+            <div class="MainArticle__info">
+                <span><%= new Date(data[0].createdAt).toLocaleDateString('es-es', { year: 'numeric', month: 'short', day: 'numeric' }) %></span>
+                <h5><%= data[0].category %></h5>
+            </div>
+
+            <h3 class="MainArticle__h3"  title=<%= data[0].title %>><%= data[0].title %></h3>
+            <span class="MainArticle__span"><%= data[0].createdBy %></span>
+        </div>
+    </div>
+
+    <div class="MainArticles__secundaryContainer">
+
+        <!-- --------------- ARTICLE 2 -------------- -->
+
+        <div class="SecundaryArticle">
+
+            <div class="SecundaryArticle__imageContainer">
+                <a title="<%= data[1].title %>" href="/articles/<%= data[1]._id %>">
+                <img src="<%= data[1].image %>" class="MainArticles__image" alt="Poner alt en base de datos"/>
+                </a>
+            </div>
+
+            <div class="SecundaryArticle__text">
+                <div class="SecundaryArticle__info">
+                    <span><%= new Date(data[1].createdAt).toLocaleDateString('es-es', { year: 'numeric', month: 'short', day: 'numeric' }) %></span>
+                    <h5><%= data[1].category %></h5>
+                </div>
+
+                <h3 class="SecundaryArticle__h3"  title=<%= data[1].title %>><%= data[1].title %></h3>
+                <span class="SecundaryArticle__span"><%= data[1].createdBy %></span>
+            </div>
+
+        </div>
+
+        <!-- --------------- ARTICLE 3 -------------- -->
+
+        <div class="SecundaryArticle">
+
+            <div class="SecundaryArticle__imageContainer">
+                <a title="<%= data[2].title %>" href="/articles/<%= data[2]._id %>">
+                <img src="<%= data[2].image %>" class="MainArticles__image" alt="Poner alt en base de datos"/>
+                </a>
+            </div>
+
+            <div class="SecundaryArticle__text">
+                <div class="SecundaryArticle__info">
+                    <span><%= new Date(data[2].createdAt).toLocaleDateString('es-es', { year: 'numeric', month: 'short', day: 'numeric' }) %></span>
+                    <h5><%= data[2].category %></h5>
+                </div>
+
+                <h3 class="SecundaryArticle__h3"  title=<%= data[2].title %>><%= data[2].title %></h3>
+                <span class="SecundaryArticle__span"><%= data[2].createdBy %></span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>  

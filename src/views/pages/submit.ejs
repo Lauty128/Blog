@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script 
+        src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"> //Le ponemos un if para que no aparezca siempre, solo en una pagina en especifico
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <%- include('../templates/Header') %>
+
+    <form action="/api/submit" method="POST" enctype="multipart/form-data">
+        <input type="text" name="title" placeholder="Titulo">
+        <input type="file" name="image">
+        <input type="text" name="imageContribution" placeholder="Dueño de imagen">
+        <input type="text" name="alt" placeholder="Alt de imagen">
+        <input type="text" name="category" placeholder="Categoria">
+        <input type="date" name="createdAt">
+        <input type="text" name="createdBy" placeholder="Escritor">
+        <textarea id="ckeditor"  class="ckeditor" cols="20" rows="30" name="content"></textarea>
+        <input type="submit" value="SUBIR" id="boton">
+    </form>
+    
+    <style>
+        
+        input{ display: block; margin-bottom: 40px; font-size: 1.3em; margin-left: 10em; }
+        textarea{ margin-bottom: 40px; }    
+    
+    </style>
+
+    <%- include('../templates/Footer') %>
+
+    <script>
+        ClassicEditor.create(document.getElementById('ckeditor'))
+            .catch(err=>  console.log(err))
+    </script>
+
+</body>
+</html>
+
+

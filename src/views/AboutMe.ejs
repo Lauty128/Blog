@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/pages/article.css">
+    <!-- STYLES IN ARTICLE.SCSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Document</title>
+</head>
+<body>
+    <%- include('templates/Header') %>
+
+    <main class="Main">
+
+        <img src="/assets/tim-marshall-K2u71wv2eI4-unsplash.jpg" class="Main__headerImage" alt="Hombre en montaña" data-aos="fade-zoom-in" data-aos-delay="100" data-aos-duration="800" /> 
+
+        <h2 class="Main__h2">SOBRE MI</h2>
+        
+        <div class="Main__content">
+        
+            <p>
+                Soy un estudiante de 19 años apasionado por la tecnología. Actualmente me encuentro en el primer año de mis estudios, pero ya cuento con objetivos y proyectos (este blog es uno de ellos) los cuales abordar durante la carrera. 
+                <br />
+                No solo me interesa la tecnología, sino que en el 2022 comenzaron a llamarme la atención los libros de desarrollo personal. Comencé con el famoso <i>"Padre rico, padre pobre"</i> de Robert Kiyosaki, el cual fue el inicio de muchos, y luego continue con <i>"Hábitos Atómicos"</i> de James Clear. Con estos libros cambie la mentalidad que tenia acerca del dinero, de la vida y de los hábitos, por lo que comencé a implementar todos los conocimientos obtenidos de estos libros y a profundizar mas.
+            </p>
+
+            <div class="imagesContainer">
+                <img class="imagesContainer__img1" src="/assets/adam-birkett-z_MlmEelJpE-unsplash.jpg" alt="" data-aos="fade-right" data-aos-duration="1000" />
+                <img class="imagesContainer__img2" src="/assets/dan-asaki-CG6Wo4Ac4uc-unsplash.jpg" alt="" data-aos="fade-left" data-aos-duration="1000" />
+            </div>
+
+            <p>
+                Ahora que me conocen un poco mas, quiero explicarles la finalidad de este blog.                <br /> 
+                Lo que yo busco es promover todos los conocimientos que eh adquirido, y voy a adquirir, para todas esas personas que están buscando un propósito en la vida y también para aquellas que ya tienen un propósito, pero estan buscando un orden en su vida. <br>
+                No crean que todo lo que escribo aquí es verdad. Lo que quiero hacer es compartir mis conocimientos y opinión sobre ciertos aspectos, pero eso no quiere decir que mi opinión sea la correcta. Quiero dejar eso en claro para no generar ningún tipo de conflicto. Estoy abierto a cualquier comentario o duda acerca del contenido que publico. Pueden enviarme un email en la sección de <a href="/contact">Contacto</a> o comunicarse a través de las redes sociales, las cuales las pueden encontrar en la parte de abajo
+                <br />
+                Con este blog puedo mezclar las dos cosas que mas me interesan. Los libros y la programación.
+            </p>
+
+            <p>
+                Este es mi primer proyecto grande, por lo que es muy importante y va a generar un gran cambio en mi vida como desarrollador. En estos momentos me encuentro trabajando en el blog, y hasta ahora he aprendido muchas cosas. Una de ellas es que lo más importante es comenzar, ya que si yo no hubiera tenido la iniciativa de comenzar este proyecto no hubiera conseguido la oportunidad de aprender las cosas que aprendí. <br>
+                Quería dejar este mensaje aquí, ya que muchas personas, donde me incluyo, tienen miedo de comenzar un proyecto grande, ya que incluye un cambio drástico y darle frente a lo desconocido. Pero lo que pasa es que ahí es donde uno crece.  
+            </p>
+
+            <h3>Estudios</h3>
+            <p>
+                Actualmente me encuentro estudiando una carrera terciaria de analista de sistemas en el instituto 130 de mi ciudad - Olavarría, Buenos aires.
+                <br />
+                Como dije anteriormente, me encuentro en el primer año de la carrera, de los cuales son 3. En el 2020 estuve cursando la carrera de ingeniería de sistemas en UNICEN, pero como esa carrera no me dejaba mucho tiempo libre, la deje para poder dedicarle tiempo a otros proyectos mientras estudiaba otra carrera, también relacionada al ámbito tecnológico. Y así fue como entre en la carrera que me encuentro actualmente
+            </p>
+
+        </div>
+
+        
+    </main>
+
+    <%- include('templates/Footer') %>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>

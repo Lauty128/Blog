@@ -1,0 +1,65 @@
+body {
+  background: url("../../assets/background-4032775_1280.png");
+  background-position: center;
+  backdrop-filter: blur(4px);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backTo {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  font-size: 1.2em;
+}
+
+.Form {
+  background-color: rgb(255, 255, 255);
+  padding: 2em;
+  position: relative;
+}
+.Form__h2 {
+  text-align: center;
+  margin-bottom: 0.7em;
+}
+.Form__inputContainer {
+  margin-bottom: 1em;
+  width: 20em;
+}
+.Form__label {
+  display: block;
+}
+.Form__input {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 0.5em 0.2em;
+  font-size: 1.2em;
+  width: 100%;
+}
+.Form__submit {
+  width: 100%;
+  padding: 0.4em;
+  margin-top: 0.3em;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.2em;
+  background-color: var(--secundary-color);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  transition: box-shadow 0.1s linear;
+}
+.Form__submit:hover {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 400px) {
+  .Form__inputContainer {
+    width: 16em;
+  }
+}
+
+/*# sourceMappingURL=login.css.map */

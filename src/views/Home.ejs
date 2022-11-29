@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/pages/home.css">
+    <script src="https://kit.fontawesome.com/934826e832.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>INICIO</title>
+</head>
+<body>
+    <%- include('templates/Header') %>
+
+
+    <div class="MainCard">
+
+        <img class="MainCard__img" src="assets/monstera-5516509_1920.png" loading="eager" alt="Portada de blog" />
+    
+        <div class="MainCard__text">
+            <h2 class="MainCard__h2">BIENVENIDO A MI BLOG</h2>
+            <p class="MainCard__p">Aqui encontraras conocimientos muy utiles. Ya seas estudiante, emprendedor, etc. Siempre se puede aprender un poco mas. <br />
+            Espero que lo disfrutes tanto como yo disfrute creando este blog.</p>
+            <span class="MainCard__span">- Lautaro Silverii</span>
+        </div>
+    
+    </div>
+    
+
+
+    <main class="Main">
+    
+        <section class="ArticlesSection"> 
+            <article class="ArticlesSection__article">
+                <h2 class="Main__h2">ARTICULOS</h2>
+
+                <div class="ArticlesSection__articlesContainer">
+                    <% data.forEach(element=>{ %>
+
+                        <div class="Article" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">
+
+                            <div class="Article__imageContainer">
+                                <a href="/articles/<%- element._id %>">
+                                    <img src="<%- element.image %>" alt="<%- element.alt %>" title="<%- element.title %>">
+                                </a>
+                            </div>
+
+                            <div class="Article__text">
+
+                                <div class="Article__info">
+                                    <span class="Article__date"><%- new Date(element.createdAt).toLocaleDateString('es-es', { year: 'numeric', month: 'short', day: 'numeric' }) %></span>
+                                    <span class="Article__category">
+                                        <a><%- element.category %></a>
+                                    </span>
+                                </div>
+
+                                <h2 class="Article__title" title="<%- element.title %>">
+                                    <a href="/articles/<%- element._id %>">
+                                        <%- element.title %>
+                                    </a>
+                                </h2>
+
+                                <span class="Article__createdBy"><%- element.createdBy %></span>
+                            </div>
+
+                        </div>
+
+                    <% }) %>
+                </div>
+            </article>
+
+            <!-- HERE THE ASIDE WILL BE ADDED -->
+
+        </section>
+    
+
+        <section class="InfoSection">
+            
+            <div class="InfoSection__content">
+                <h2 class="Main__h2">SOBRE EL BLOG</h2>
+                <p class="InfoSection__text">
+                    La finalidad de este blog es hablar sobre temas de interes propios, con la finalidad de reflexionar un poco sobre ellos. y ademas compartir mis conocimientos. <br>
+                    Simplemente se trata de eso, aunque tambien esta informacion le puede servir de ayuda alguien, con el fin de lograr un cambio en su vida. Esta informacion es muy util, y nadie sabe lo que para uno puede significar, asi que espero que de verdad esto no solo pueda ayudarme a mi, sino tambien a ti 
+                </p>
+            </div>
+
+            <div class="InfoSection__cardsContainer">
+
+                <div class="Card" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="Card__imageContainer">
+                        <img src="https://res.cloudinary.com/dyrpgj8od/image/upload/f_auto,q_auto/v1668826386/Blog/prophsee-journals-WI30grRfBnE-unsplash_iti64g.jpg" class="Card__image" alt="habitos habits">
+                    </div>
+                    <div class="Card__textContainer">
+                        <h3 class="Card__h3">Habitos</h3>
+                        <p class="Card__p">Crear buenos habitos y eliminar los malos</p>
+                    </div>
+                </div>
+
+                <div class="Card" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="Card__imageContainer">
+                        <img src="https://res.cloudinary.com/dyrpgj8od/image/upload/f_auto,q_auto/v1668826389/Blog/alexandru-acea-wEtSbhHh6i4-unsplash_o0rbt7.jpg" class="Card__image" alt="habitos habits">
+                    </div>
+                    <div class="Card__textContainer">
+                        <h3 class="Card__h3">Programacion</h3>
+                        <p class="Card__p">Novedades y temas de conversacion interesantes</p>
+                    </div>
+                </div>
+
+                <div class="Card" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="Card__imageContainer">
+                        <img src="https://res.cloudinary.com/dyrpgj8od/image/upload/f_auto,q_auto/v1668827488/Blog/elnaz-asadi-VcdXeNqh10Y-unsplash_msunhe.jpg" class="Card__image" alt="habitos habits">
+                    </div>
+                    <div class="Card__textContainer">
+                        <h3 class="Card__h3">Libros</h3>
+                        <p class="Card__p">Recomendaciones y reseñas</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="AboutMeSection">
+
+            <h2 class="AboutMeSection__h2">UN POCO SOBRE MI</h2> 
+
+            <div class="AboutMeSection__div">
+                <div class="AboutMeSection__imageContainer" data-aos="fade-right"
+                data-aos-duration="1200">
+                    <img src="/assets/retrato.jpg" class="AboutMeSection__img" alt="imagen mia" />
+                </div>
+                <div class="AboutMeSection__infoContainer">
+
+                    <span class="AboutMeSection__question">Quien Soy?</span>
+                    <p class="AboutMeSection__p">Soy un estudiante de 19 años al cual le interesa mucho todo lo relacionado con la tecnologia. Hace poco comenzaron a llamarme la atencion los libros enfocados al desarrollo personal. Por lo que quise comenzar este blog, uniendo mis dos actividades favoritas. <br/>
+                    Si quieres saber un poco mas sobre entra aqui.</p>
+                    <button class="AboutMeSection__button"><a>SOBRE MI</a></button>
+                    
+                    <p class="AboutMeSection__p">Espero que te guste este blog y su contendio ya que lo hice con mucho esfuerzo. Estas fueron las tecnologias utilizadas</p>
+                    <div class="AboutMeSection__technologies">
+                        <i class="fa-brands fa-node-js AboutMeSection__icon" title="NodeJS"></i>
+                        <i class="fa-brands fa-square-js AboutMeSection__icon" title="JavaScript"></i>
+                        <i class="fa-brands fa-html5 AboutMeSection__icon" title="Html"></i>
+                        <i class="fa-brands fa-css3-alt AboutMeSection__icon" title="Css"></i>
+                        <i class="fa-brands fa-sass AboutMeSection__icon" title="Scss"></i>
+                        <i class="fa-brands fa-git AboutMeSection__icon" title="Git"></i>
+                    </div>
+                </div>
+            </div>
+
+            <blockquote class="AboutMeSection__blockquote" data-aos="fade-up" data-aos-duration="1200">
+                <p class="AboutMeSection__pCite">Lo que importa no es lo que te sucede, sino como reaccionas a lo que te sucede</p>
+                <footer class="AboutMeSection__footerCite"><cite class="AboutMeSection__cite">- Epicteto</cite></footer>
+                <img class="AboutMeSection__imgCite" src="/assets/comillas.png" alt="comillas"/>
+            </blockquote> 
+
+        </section>
+
+    </main>
+    
+    <%- include('templates/Footer') %>
+
+    <script src="/js/home/index.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>

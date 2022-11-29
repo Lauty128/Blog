@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/pages/contact.css">
+    <title>Contactame</title>
+</head>
+<body>
+
+    <%- include('templates/Header') %>
+
+    <div class="HeaderContact">
+        <h1 class="HeaderContact__h1">CONTACTAME</h1>
+        <p class="HeaderContact__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, atque! Hic suscipit laborum voluptate harum expedita eligendi repudiandae quas beatae.</p>
+    </div>
+    
+    <main class="Main">
+
+        <form class="Form">
+
+            <div class="Form__inputContainer">
+                <label htmlFor="nameInput" class="Form__label">* Nombre</label>
+                <input type="text" name='name' id='nameInput' class="Form__input" />
+            </div>
+            
+            <div class="Form__inputContainer">
+                <label htmlFor="emailInput" class="Form__label">* Email</label>
+                <input type="text" name='email' id='emailInput' class="Form__input" />
+            </div>
+            
+            <div class="Form__inputContainer">
+                <label htmlFor="linkedinInput" class="Form__label">Linkedin</label>
+                <input type="text" name='linkedin' id='linkedinInput' class="Form__input" />
+            </div>
+
+            <div class="Form__inputContainer">
+                <label htmlFor="proposalInput" class="Form__label">* Mensaje</label>
+                <textarea name="proposal" id="proposalInput"
+                class="Form__input Form_textArea" rows="10">
+
+                </textarea>
+            </div>
+
+            <input type="submit" value="ENVIAR" class="Form__submit" />
+
+        </form>
+
+    </main>
+
+    <%- include('templates/Footer') %>
+
+</body>
+</html>

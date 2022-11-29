@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script 
+        src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"> //Le ponemos un if para que no aparezca siempre, solo en una pagina en especifico
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/pages/dashboard.css">
+    <script src="https://kit.fontawesome.com/934826e832.js" crossorigin="anonymous"></script>
+
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <div class="root">
+
+        <header class="Header">
+            <div class="Header__logo">
+                <img src="/assets/profile.jpg" alt="perfil silverii" class="Header__img">
+                <h1 class="Header__h1">LAUTARO SILVERII</h1>
+            </div>
+
+            <a href="/" class="Header__home">
+                <i class="fa-solid fa-house"></i>
+            </a>
+        </header>
+
+        <main class="Main">
+
+            <div class="Card">
+                <span class="Card__span">Total Views</span>
+                <p class="Card__number"><%- Views %></p>
+                <span class="Card__date"></span>
+            </div>
+            <div class="Card Card2">
+                <span class="Card__span">Quantity of Articles</span>
+                <p class="Card__number"><%- Data.length %></p>
+            </div>
+
+            <div class="ArticlesCard">
+                <!-- LOAD IT FROM JAVASCRIPT FETCH -->
+                <div class="PreLoad">
+                    <div class="PreLoad__article">
+                        <div class="PreLoad__img"></div>
+                        <div class="PreLoad__div">
+                            <div class="PreLoad__info"></div>
+                            <div class="PreLoad__title"></div>
+                        </div>
+                    </div>
+                    <div class="PreLoad__article">
+                        <div class="PreLoad__img"></div>
+                        <div class="PreLoad__div">
+                            <div class="PreLoad__info"></div>
+                            <div class="PreLoad__title"></div>
+                        </div>
+                    </div>
+                    <div class="PreLoad__article">
+                        <div class="PreLoad__img"></div>
+                        <div class="PreLoad__div">
+                            <div class="PreLoad__info"></div>
+                            <div class="PreLoad__title"></div>
+                        </div>
+                    </div>
+                    <div class="PreLoad__article">
+                        <div class="PreLoad__img"></div>
+                        <div class="PreLoad__div">
+                            <div class="PreLoad__info"></div>
+                            <div class="PreLoad__title"></div>
+                        </div>
+                    </div>
+                    <div class="PreLoad__article">
+                        <div class="PreLoad__img"></div>
+                        <div class="PreLoad__div">
+                            <div class="PreLoad__info"></div>
+                            <div class="PreLoad__title"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <aside class="Aside">
+
+                <div class="MostViewedCard">
+                    <!-- LOAD IT FROM JAVASCRIPT FETCH -->
+                    <div class="PreLoad">
+                        <div class="PreLoad__article">
+                            <div class="PreLoad__img"></div>
+                            <div class="PreLoad__div">
+                                <div class="PreLoad__info"></div>
+                                <div class="PreLoad__title"></div>
+                            </div>
+                        </div>
+                        <div class="PreLoad__article">
+                            <div class="PreLoad__img"></div>
+                            <div class="PreLoad__div">
+                                <div class="PreLoad__info"></div>
+                                <div class="PreLoad__title"></div>
+                            </div>
+                        </div>
+                        <div class="PreLoad__article">
+                            <div class="PreLoad__img"></div>
+                            <div class="PreLoad__div">
+                                <div class="PreLoad__info"></div>
+                                <div class="PreLoad__title"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="createNewArticle" id="CreateNewArticle">
+                    <i class="fa-solid fa-plus"></i>
+                    NEW ARTICLE
+                </button>
+
+            </aside>
+
+            
+
+        </main>
+
+    </div>
+
+    <div class="boxContainer">
+
+        <div class="DisplayBox boxContainer__box">
+            <i class="fa-solid fa-xmark DisplayBox__close"></i>
+            <span class="DisplayBox__date"></span>
+            <img src="" alt="" class="DisplayBox__img">
+            <h2 class="DisplayBox__title"></h2>
+            <div class="DisplayBox__info">
+               <span class="DisplayBox__views"></span> 
+               <span class="DisplayBox__category"></span>
+               <span class="DisplayBox__imageOwner"></span>
+               <span class="DisplayBox__createdBy"></span>
+            </div>
+            <div class="DisplayBox__content">
+            </div>
+        </div>
+
+        <div class="NewArticleBox boxContainer__box">
+
+            <form action="/api/submit" method="post" enctype="multipart/form-data" id="newArticleForm" >
+
+                <div class="NewArticleBox__imgContainer">
+                    <img src="">
+                    <label for="file" class="imageLabel">
+                        Upload File
+                        <input type="file" id="file" name="image">
+                    </label>
+                    <!-- DROP & DRAG -->
+                </div>
+
+                <div class="NewArticleBox__inputContainer">
+                    <label for="">Title</label>
+                    <input type="text" name="title" id="">
+                </div>
+                <div class="NewArticleBox__inputContainer">
+                    <label for="">Created At</label>
+                    <input type="date" name="createdAt" id="">
+                </div>
+                <div class="NewArticleBox__inputContainer">
+                    <label for="">Category</label>
+                    <input type="text" name="category" id="">
+                </div>
+                <div class="NewArticleBox__inputContainer">
+                    <label for="">Image Owner</label>
+                    <input type="text" name="imageContribution" id="">
+                </div>
+                <div class="NewArticleBox__inputContainer">
+                    <label for="">Created By</label>
+                    <input type="text" name="createdBy" id="">
+                </div>
+                <div class="NewArticleBox__textAreaContainer">
+                    <textarea id="ckeditor"  class="ckeditor" name="content"></textarea>
+                </div>
+                <div class="NewArticleBox__inputContainer">
+                    <label for="">Image Alt</label>
+                    <input type="text" name="alt" id="">
+                </div>
+
+            </form>
+            
+            <div class="NewArticleBox__buttons">
+                <button class="NewArticleBox__addButton" type="submit" form="newArticleForm">
+                    <i class="fa-solid fa-plus"></i>
+                    NEW ARTICLE
+                </button>
+                <button class="NewArticleBox__cancelButton">
+                    <i class="fa-solid fa-xmark"></i>
+                    CANCEL
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="Message">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, voluptatum?</p>
+    </div>
+
+
+    <script>
+        ClassicEditor.create(document.getElementById('ckeditor'))
+          .catch(err=>  console.log(err)) //Seleccionar 
+    </script>
+
+    <script src="/js/dashboard/index.js" type="module"></script>
+
+</body>
+</html>
+
+

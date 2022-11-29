@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/pages/article.css">
+    <script src="https://kit.fontawesome.com/934826e832.js" crossorigin="anonymous"></script>
+    <title><%= data.title %></title>
+</head>
+<body>
+
+    <%- include('templates/Header'); %>
+
+
+    <main class="Main">
+        <a href="/" class="Main__backTo">
+            <i class="fa-solid fa-reply"></i>
+        </a>
+
+        <img src="<%= data.image %>" alt="<%= data.alt %>" class="Main__headerImage">
+
+        <div class="Main__infoContainer">
+            <span><%= data.createdAt %></span>
+            <a href="#"><span class="category"><%= data.category %></span></a>
+        </div>
+
+        <h2 class="Main__h2"><%= data.title.toUpperCase() %></h2>
+
+        <span class="Main__createdBy"><%= data.createdBy %></span>
+
+        <div class="Main__content">
+
+            <%- data.content %>
+
+        </div>
+
+        
+    </main>
+
+
+    <%- include('templates/Footer'); %>
+
+</body>
+</html>
