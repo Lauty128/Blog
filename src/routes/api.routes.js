@@ -10,7 +10,7 @@ const { authenticated } = require("../controllers/middlewares")
 //------------------------ Router
 const router = Router()
 
-router.use(cors())
+router.use(cors({ origin:true, credentials:true }))
 
 router.use("/submit", authenticated)
 
