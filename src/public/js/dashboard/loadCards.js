@@ -1,9 +1,9 @@
 import utils from "../utils.js"
 
-const url = 'https://blog-production-dfa3.up.railway.app/'
+const url = 'https://silveriiblog.up.railway.app/'
 
 async function loadArticlesCard(){ // Auto-run Function
-    const dataFetch = await fetch('https://blog-production-dfa3.up.railway.app/api/all')
+    const dataFetch = await fetch('https://silveriiblog.up.railway.app/api/all')
     const data = await dataFetch.json()
 
     const fragment = document.createDocumentFragment()    
@@ -52,7 +52,7 @@ async function loadArticlesCard(){ // Auto-run Function
 }
 
 async function loadMostViewedCard(){
-    const dataFetch = await fetch('https://blog-production-dfa3.up.railway.app/api/all/order')
+    const dataFetch = await fetch('https://silveriiblog.up.railway.app/api/all/order')
     const data = await dataFetch.json()
 
     const fragment = document.createDocumentFragment()    
@@ -97,7 +97,7 @@ async function loadMostViewedCard(){
 }
 
 async function loadDisplayBox(id){
-    fetch(`https://blog-production-dfa3.up.railway.app/api/${id}`)
+    fetch(`https://silveriiblog.up.railway.app/api/${id}`)
         .then(response => response.json())
         .then(data =>{
 

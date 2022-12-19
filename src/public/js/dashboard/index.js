@@ -48,7 +48,7 @@ document.querySelector(".Main").addEventListener("click", async (e)=>{ //--- Ope
 
             if(i.target.classList.contains("ConfirmBox__yes")){
                 try{
-                    const response = await fetch(`https://blog-production-dfa3.up.railway.app/api/remove/${id}`,{ method:"DELETE" })
+                    const response = await fetch(`https://silveriiblog.up.railway.app/api/remove/${id}`,{ method:"DELETE" })
                     const message = await response.json()
 
                     const type = (message.status == 200) ? true : false
