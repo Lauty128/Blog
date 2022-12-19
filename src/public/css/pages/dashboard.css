@@ -181,6 +181,9 @@ body {
 
 .Aside {
   grid-column: 2 span;
+  position: sticky;
+  top: 0.5em;
+  height: fit-content;
 }
 
 .MostViewedCard {
@@ -212,6 +215,7 @@ body {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
   transition: box-shadow linear 0.1s;
 }
+
 .createNewArticle:hover {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4), 0 0 6px rgba(0, 0, 0, 0.4);
 }
@@ -225,6 +229,7 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
   display: none;
 }
+
 .boxContainer__box {
   background-color: #fff;
   display: flex;
@@ -411,10 +416,10 @@ body {
   transform: translateX(50em);
   transition: transform 0.5s linear;
 }
-.Message--error {
+.Message .Message--error {
   background-color: rgba(206, 82, 82, 0.856);
 }
-.Message--active {
+.Message .Message--active {
   transform: translateX(0);
 }
 

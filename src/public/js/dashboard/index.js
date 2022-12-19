@@ -9,7 +9,7 @@ import  {
 //import utils from '../utils.js'
 
 setTimeout(()=>{
-    loadArticlesCard()
+    loadArticlesCard(5, false)
     loadMostViewedCard()
 } , 800) // Load the cards 
 
@@ -35,6 +35,8 @@ async function deleteArticle(id){
 document.querySelector(".Main").addEventListener("click", async (e)=>{ //--- Open Box
     const element = e.target
     
+    if(element.classList.contains("ArticlesCard__viewMore")) loadArticlesCard(undefined, true)
+
     if(element.classList.contains("Article__viewMore")) openBox( element.getAttribute("data-id"), "DisplayBox" )
 
     

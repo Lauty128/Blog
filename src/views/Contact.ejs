@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/934826e832.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="assets/monstera-5516509_1920.png" type="image/png">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/pages/contact.css">
     <title>Contactame</title>
@@ -20,7 +21,7 @@
     
     <main class="Main">
 
-        <form class="Form">
+        <form class="Form" action='<%= host %>/api/contact' method="post">
 
             <div class="Form__inputContainer">
                 <label htmlFor="nameInput" class="Form__label">* Nombre</label>
@@ -39,7 +40,7 @@
 
             <div class="Form__inputContainer">
                 <label for="proposalInput" class="Form__label">* Mensaje</label>
-                <textarea name="proposal" id="proposalInput"
+                <textarea name="message" id="proposalInput"
                 class="Form__input Form_textArea" rows="10" value="">
                 </textarea>
             </div>

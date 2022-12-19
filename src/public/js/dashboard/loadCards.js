@@ -2,13 +2,15 @@ import utils from "../utils.js"
 
 const url = 'https://blog-production-dfa3.up.railway.app/'
 
-async function loadArticlesCard(){ // Auto-run Function
+async function loadArticlesCard(number = undefined, complete){ // Auto-run Function
     const dataFetch = await fetch('https://blog-production-dfa3.up.railway.app/api/all')
     const data = await dataFetch.json()
 
+    const cant = number || data.length
+
     const fragment = document.createDocumentFragment()    
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < cant; i++) {
         
         const article = document.createElement("div")
         const img = document.createElement("img")
@@ -49,6 +51,9 @@ async function loadArticlesCard(){ // Auto-run Function
 
     document.querySelector(".ArticlesCard").innerHTML = "" 
     document.querySelector(".ArticlesCard").appendChild(fragment)
+    if(!complete){
+        document.querySelector(".ArticlesCard").insertAdjacentHTML("beforeend",` <span class="ArticlesCard__viewMore">View More</span> `)
+    }
 }
 
 async function loadMostViewedCard(){

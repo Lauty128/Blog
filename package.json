@@ -6,12 +6,14 @@
   "scripts": {
     "start": "node src/index",
     "dev": "nodemon src/index.js",
-    "sass": "sass --watch src/public/sass:src/public/css"
+    "sass": "sass --watch src/public/sass:src/public/css",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "cloudinary": "^1.32.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",

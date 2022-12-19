@@ -54,6 +54,12 @@ const removeData = async(req,res)=>{
     }
 }
 
+const contact = (req,res)=>{
+    const emailJs = require("@emailjs/browser")
+
+    emailJs.send('service_9uivd2t', 'template_pedbl5e', req.body, '7W6DBOmDsZB4m10Pk')
+}
+
 const authenticateLogin = async(req,res) =>{
     const { user, password } = req.body
     
@@ -75,5 +81,6 @@ module.exports = {
     submitData,
     newVisualization,
     removeData,
+    contact,
     authenticateLogin
 }

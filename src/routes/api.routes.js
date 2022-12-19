@@ -10,7 +10,7 @@ const { authenticated } = require("../controllers/middlewares")
 //------------------------ Router
 const router = Router()
 
-router.use(cors())
+router.use(cors({ origin:true, credentials:true }))
 
 router.use("/submit", authenticated)
 
@@ -23,6 +23,7 @@ router.delete("/remove/:id", authenticated ,Controller.removeData )
 router.post("/submit", upload.single('image') , Controller.submitData )
 router.post("/view", Controller.newVisualization)
 router.post("/login", Controller.authenticateLogin)
+router.post("/contact", Controller.contact)
 
 //------------------------ Export
 module.exports = router
