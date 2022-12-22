@@ -15,6 +15,6 @@ const get_imageOwner = (url)=>{
     }
   }
 
-export default {
-  get_imageOwner
-}
+  export default {
+    get_imageOwner
+  }

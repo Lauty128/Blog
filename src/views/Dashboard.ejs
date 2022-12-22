@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/monstera-5516509_1920.png" type="image/png">
     <script 
-        src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js">
+        src="https://cdn.ckeditor.com/ckeditor5/35.1.0/classic/ckeditor.js"> //Le ponemos un if para que no aparezca siempre, solo en una pagina en especifico
     </script>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/pages/dashboard.css">
+    <link rel="stylesheet" href="css/index.min.css">
+    <link rel="stylesheet" href="css/pages/dashboard.min.css">
     <script src="https://kit.fontawesome.com/934826e832.js" crossorigin="anonymous"></script>
 
     <title>Dashboard</title>
@@ -36,7 +35,6 @@
                 <p class="Card__number"><%- Views %></p>
                 <span class="Card__date"></span>
             </div>
-
             <div class="Card Card2">
                 <span class="Card__span">Quantity of Articles</span>
                 <p class="Card__number"><%- Data.length %></p>
@@ -81,9 +79,11 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
 
             <aside class="Aside">
+
                 <div class="MostViewedCard">
                     <!-- LOAD IT FROM JAVASCRIPT FETCH -->
                     <div class="PreLoad">
@@ -112,14 +112,17 @@
                 </div>
 
                 <button class="createNewArticle" id="CreateNewArticle">
-                    <i class="fa-solid fa-plus"></i> NEW ARTICLE
+                    <i class="fa-solid fa-plus"></i>
+                    NEW ARTICLE
                 </button>
+
             </aside>
+
+            
 
         </main>
 
     </div>
-
 
     <div class="boxContainer">
 
@@ -139,7 +142,9 @@
         </div>
 
         <div class="NewArticleBox boxContainer__box">
+
             <form action="/api/submit" method="post" enctype="multipart/form-data" id="newArticleForm" >
+
                 <div class="NewArticleBox__imgContainer">
                     <img src="">
                     <label for="file" class="imageLabel">
@@ -176,6 +181,7 @@
                     <label for="">Image Alt</label>
                     <input type="text" name="alt" id="">
                 </div>
+
             </form>
             
             <div class="NewArticleBox__buttons">
@@ -200,7 +206,7 @@
 
     <script>
         ClassicEditor.create(document.getElementById('ckeditor'))
-          .catch(err=>  console.log(err))
+          .catch(err=>  console.log(err)) //Seleccionar 
     </script>
 
     <script src="/js/dashboard/index.js" type="module"></script>

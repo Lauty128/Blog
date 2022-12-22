@@ -36,7 +36,7 @@ const Article = async(req,res)=>{
 }
 
 const Contact =  (req,res)=>{
-    res.render("Contact",{ host: process.env.HOST })
+    res.render("Contact")
 }
 
 const AboutMe = (req,res)=>{

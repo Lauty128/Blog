@@ -4,7 +4,7 @@ const { Router } = require('express')
 
 //------------------------ Controllers
 const Controller = require('../controllers/page.controllers')
-const Middleware = require("../controllers/middlewares")
+const Middleware = require("../middlewares/page")
 
 //------------------------ Routee
 const router = Router()

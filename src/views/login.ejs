@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/monstera-5516509_1920.png" type="image/png">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/pages/login.css">
+    <link rel="stylesheet" href="css/index.min.css">
+    <link rel="stylesheet" href="css/pages/main.min.css">
     <script src="https://kit.fontawesome.com/934826e832.js" crossorigin="anonymous"></script>
     <title>Login</title>
 </head>
-<body>
+<body class="background-login">
 
     
     <form action="/api/login" method="post" class="Form">
@@ -19,17 +18,17 @@
             <i class="fa-solid fa-reply"></i>
         </a>
 
-        <h2 class="Form__h2">LOGIN</h2>
+        <h2 class="Form-login__h2">LOGIN</h2>
 
-        <div class="Form__inputContainer">
-            <label for="userInput" class="Form__label">Usuario</label>
-            <input type="text" name="user" id="userInput" class="Form__input">
+        <div class="Form-login__inputContainer">
+            <label for="userInput" class="Form-login__label">Usuario</label>
+            <input type="text" name="user" id="userInput" class="Form-login__input">
         </div>
-        <div class="Form__inputContainer">
-            <label for="passwordInput" class="Form__label">Contraseña</label>
-            <input type="password" name="password" id="passwordInput" class="Form__input">
+        <div class="Form-login__inputContainer">
+            <label for="passwordInput" class="Form-login__label">Contraseña</label>
+            <input type="password" name="password" id="passwordInput" class="Form-login__input">
         </div>
-        <input type="submit" value="INGRESAR" class="Form__submit">
+        <input type="submit" value="INGRESAR" class="Form-login__submit">
     </form>
 
 </body>

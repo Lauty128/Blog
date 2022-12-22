@@ -5,7 +5,7 @@ const upload = require('../config/multer')
 
 //------------------------ Controllers
 const Controller = require('../controllers/api.controllers')
-const { authenticated } = require("../controllers/middlewares")
+const { authenticated } = require("../middlewares/api")
 
 //------------------------ Router
 const router = Router()
@@ -23,7 +23,6 @@ router.delete("/remove/:id", authenticated ,Controller.removeData )
 router.post("/submit", upload.single('image') , Controller.submitData )
 router.post("/view", Controller.newVisualization)
 router.post("/login", Controller.authenticateLogin)
-router.post("/contact", Controller.contact)
 
 //------------------------ Export
 module.exports = router

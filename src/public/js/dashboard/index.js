@@ -9,7 +9,7 @@ import  {
 //import utils from '../utils.js'
 
 setTimeout(()=>{
-    loadArticlesCard(5, false)
+    loadArticlesCard()
     loadMostViewedCard()
 } , 800) // Load the cards 
 
@@ -35,8 +35,6 @@ async function deleteArticle(id){
 document.querySelector(".Main").addEventListener("click", async (e)=>{ //--- Open Box
     const element = e.target
     
-    if(element.classList.contains("ArticlesCard__viewMore")) loadArticlesCard(undefined, true)
-
     if(element.classList.contains("Article__viewMore")) openBox( element.getAttribute("data-id"), "DisplayBox" )
 
     
@@ -50,7 +48,7 @@ document.querySelector(".Main").addEventListener("click", async (e)=>{ //--- Ope
 
             if(i.target.classList.contains("ConfirmBox__yes")){
                 try{
-                    const response = await fetch(`https://blog-production-dfa3.up.railway.app/api/remove/${id}`,{ method:"DELETE" })
+                    const response = await fetch(`https://silveriiblog.up.railway.app/api/remove/${id}`,{ method:"DELETE" })
                     const message = await response.json()
 
                     const type = (message.status == 200) ? true : false
